@@ -1,0 +1,15 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwxvuqcgd4hn6"]
+
+[ext_resource type="Script" path="res://GameManager.gd" id="1_2ey1r"]
+[ext_resource type="PackedScene" uid="uid://lo0jnyfxgk28" path="res://prefabs/stages/world.tscn" id="2_eqe5b"]
+[ext_resource type="PackedScene" uid="uid://byxo661fkbu8v" path="res://prefabs/player/box_normal.tscn" id="3_ej3n0"]
+[ext_resource type="PackedScene" uid="uid://c4c5qxewxl6ni" path="res://prefabs/player/box_bounce.tscn" id="5_qx4fl"]
+[ext_resource type="PackedScene" uid="uid://hqd8vumqbmkx" path="res://prefabs/player/box_friction.tscn" id="6_wsb0a"]
+
+[node name="Main" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_2ey1r")
+object_templates = Array[PackedScene]([ExtResource("3_ej3n0"), ExtResource("6_wsb0a"), ExtResource("5_qx4fl")])
+
+[node name="World" parent="." instance=ExtResource("2_eqe5b")]

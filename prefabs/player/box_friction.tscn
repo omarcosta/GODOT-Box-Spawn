@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://hqd8vumqbmkx"]
+
+[ext_resource type="PackedScene" uid="uid://dmml6fx8rv5xk" path="res://prefabs/player/main_player.tscn" id="1_gg1w5"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_854lm"]
+friction = 0.25
+
+[node name="Box friction" instance=ExtResource("1_gg1w5")]
+rotation = 0.872665
+
+[node name="RigidBody2D" parent="." index="0"]
+mass = 10.0
+physics_material_override = SubResource("PhysicsMaterial_854lm")
+
+[node name="CollisionShape2D" parent="RigidBody2D" index="0"]
+rotation = -0.174533
+
+[node name="ColorRect" parent="RigidBody2D/CollisionShape2D" index="0"]
+color = Color(0.282353, 0.858824, 0.984314, 1)

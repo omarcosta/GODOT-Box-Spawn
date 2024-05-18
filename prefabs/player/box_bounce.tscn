@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4c5qxewxl6ni"]
+
+[ext_resource type="PackedScene" uid="uid://dmml6fx8rv5xk" path="res://prefabs/player/main_player.tscn" id="1_0k1im"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_46814"]
+bounce = 0.5
+
+[node name="Box bounce" instance=ExtResource("1_0k1im")]
+
+[node name="RigidBody2D" parent="." index="0"]
+position = Vector2(1, 0)
+physics_material_override = SubResource("PhysicsMaterial_46814")
+
+[node name="ColorRect" parent="RigidBody2D/CollisionShape2D" index="0"]
+color = Color(1, 0.419608, 0.419608, 1)

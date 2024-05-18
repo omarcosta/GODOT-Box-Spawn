@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://byxo661fkbu8v"]
+
+[ext_resource type="PackedScene" uid="uid://dmml6fx8rv5xk" path="res://prefabs/player/main_player.tscn" id="1_6lond"]
+
+[node name="Box" instance=ExtResource("1_6lond")]
+
+[node name="ColorRect" parent="RigidBody2D/CollisionShape2D" index="0"]
+color = Color(0.784314, 0.839216, 0.898039, 1)
